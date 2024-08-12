@@ -1,7 +1,7 @@
 {
 	"customer": {
-		"name": "Customer",
-		"themeModule": "Customer_Th"
+		"name": "DET",
+		"themeModule": "DET_Theme"
 	},
 	"colors": [
 		{
@@ -9,11 +9,11 @@
 			"values": [
 				{
 					"key": "primary",
-					"singleValue": "#305dce"
+					"singleValue": "#226DBD"
 				},
 				{
 					"key": "secondary",
-					"singleValue": "#303d60"
+					"singleValue": "#80C2A4"
 				}
 			]
 		},
@@ -463,7 +463,7 @@
 				},
 				{
 					"key": "neutral-10",
-					"singleValue": "#101213"
+					"singleValue": "#000000"
 				}
 			]
 		},
@@ -475,7 +475,7 @@
 					"compostValues": [
 						{
 							"key": "info",
-							"singleValue": "#017aad"
+							"singleValue": "#226DBD"
 						},
 						{
 							"key": "light",
@@ -488,7 +488,7 @@
 					"compostValues": [
 						{
 							"key": "success",
-							"singleValue": "#29823b"
+							"singleValue": "#4CAF50"
 						},
 						{
 							"key": "light",
@@ -501,7 +501,7 @@
 					"compostValues": [
 						{
 							"key": "warning",
-							"singleValue": "#e9a100"
+							"singleValue": "#E6A03E"
 						},
 						{
 							"key": "light",
@@ -514,7 +514,7 @@
 					"compostValues": [
 						{
 							"key": "error",
-							"singleValue": "#dc2020"
+							"singleValue": "#FF5252"
 						},
 						{
 							"key": "light",
