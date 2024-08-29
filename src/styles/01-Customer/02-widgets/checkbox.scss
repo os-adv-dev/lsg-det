@@ -1,0 +1,31 @@
+[data-checkbox]:before {
+  border: var(--border-size-s) solid var(--color-primary);
+}
+
+.table {
+  [data-checkbox] {
+      height: 24px;
+      width: 24px;
+
+      &:checked:after {
+          border: var(--border-size-m) solid var(--color-neutral-0);
+          border-right: var(--border-size-none) !important;
+          border-top: var(--border-size-none) !important;
+          display: block;
+          height: 4px;
+          left: 5px;
+          top: 7px;
+          width: 12px;
+      }
+
+      &:before {
+          height: 22px;
+          width: 22px;
+          border: var(--border-size-s) solid var(--color-primary);
+      }
+  }
+
+  .checkbox-intermediate:after {
+      width: 12px;
+  }
+}

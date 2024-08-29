@@ -1,4 +1,4 @@
-/*! prod.DET.desktop.css || Version: 1.0.18 || Mon Aug 12 2024 18:12:19 GMT+0800 (Singapore Standard Time) */
+/*! prod.DET.desktop.css || Version: 1.0.18 || Thu Aug 22 2024 19:52:18 GMT+0800 (Singapore Standard Time) */
 /*!
 Section Index:
 0. Root - CSS Variables
@@ -175,6 +175,7 @@ Section Index:
     9.5. Pull To Refresh
     9.6. Miscellaneous
 10. Service Studio Preview
+11. Custom Patterns
 */
 @font-face{
   font-family:Roboto;
@@ -319,7 +320,7 @@ Section Index:
   --color-header:#fff;
   --color-login:#fff;
   /*! Border Radius */
-  --border-radius-s:4px;
+  --border-radius-s:8px;
   --border-radius-l:100px;
   --border-radius-none:0px;
   /*! Border Size */
@@ -344,6 +345,147 @@ Section Index:
   --shadow-l:0px 6px 8px 0px rgba(0,0,0,.1);
   --shadow-xl:0px 8px 10px 0px rgba(0,0,0,.1);
   --shadow-xxl:0px 12px 14px 0px rgba(0,0,0,.1);
+  --font-semi-bold:500;
+}
+
+/*! 1. Resets */
+html{
+  color:var(--color-neutral-9);
+  font-family:Roboto;
+}
+
+/*!  3.1. Layout */
+.layout .content-top-container.ThemeGrid_Container{
+  padding:var(--space-xl);
+}
+.layout .content-top-subtitle{
+  font-size:var(--font-size-base);
+}
+.layout .footer.ThemeGrid_Container{
+  padding:var(--space-m) var(--space-xl);
+}
+
+.content-top-actions,.content-top-title{
+  margin-bottom:var(--space-none);
+}
+
+.content-middle.ThemeGrid_Container{
+  padding:var(--space-xl);
+  padding-bottom:calc(var(--space-xl) + var(--footer-height));
+}
+
+.content-bottom{
+  background-color:var(--color-primary);
+  bottom:0;
+  left:0;
+  position:fixed;
+  width:100%;
+}
+.content-bottom a,.content-bottom a:hover{
+  color:var(--color-neutral-0);
+  font-size:var(--font-size-base);
+  font-weight:var(--font-semi-bold);
+}
+.content-bottom .btn{
+  background-color:transparent;
+  border:var(--border-size-s) solid var(--color-neutral-0);
+  color:var(--color-neutral-0);
+}
+.content-bottom .btn[disabled]{
+  background-color:var(--color-neutral-2);
+  border:var(--border-size-s) solid var(--color-neutral-4);
+  color:var(--color-neutral-6);
+}
+.content-bottom .btn-primary{
+  background-color:var(--color-neutral-0);
+  color:var(--color-primary);
+}
+.phone .content-middle.ThemeGrid_Container,.phone .layout .content-top-container.ThemeGrid_Container,.phone .layout .footer.ThemeGrid_Container{
+  padding-left:calc(var(--os-safe-area-left) + var(--space-base));
+  padding-right:calc(var(--os-safe-area-right) + var(--space-base));
+}
+.tablet .content-middle.ThemeGrid_Container,.tablet .layout .content-top-container.ThemeGrid_Container,.tablet .layout .footer.ThemeGrid_Container{
+  padding:var(--space-m);
+}
+
+/*!  3.2. Header */
+.header{
+  -webkit-box-shadow:var(--shadow-none);
+          box-shadow:var(--shadow-none);
+}
+
+/*!  4.1. Inputs and TextAreas */
+.form-control [data-textarea],.form-control[data-input]{
+  border-radius:var(--border-radius-s);
+}
+.form-control [data-textarea]:focus,.form-control[data-input]:focus{
+  border:var(--border-size-m) solid var(--color-primary);
+}
+
+/*!  4.10. Table - Bulk Actions */
+.table{
+  border:var(--border-size-none);
+}
+
+.table-header th{
+  color:var(--color-neutral-9);
+  text-transform:uppercase;
+}
+
+[data-checkbox]:before{
+  border:var(--border-size-s) solid var(--color-primary);
+}
+
+.table [data-checkbox]{
+  height:24px;
+  width:24px;
+}
+.table [data-checkbox]:checked:after{
+  border:var(--border-size-m) solid var(--color-neutral-0);
+  border-right:var(--border-size-none) !important;
+  border-top:var(--border-size-none) !important;
+  display:block;
+  height:4px;
+  left:5px;
+  top:7px;
+  width:12px;
+}
+.table [data-checkbox]:before{
+  border:var(--border-size-s) solid var(--color-primary);
+  height:22px;
+  width:22px;
+}
+.table .checkbox-intermediate:after{
+  width:12px;
+}
+
+/*!  6.2.5. Card */
+.card{
+  border:var(--border-size-s) solid var(--color-neutral-0);
+}
+
+/*!  6.2.14. Tag */
+.tag[class*=lightest]{
+  border:var(--border-size-s) solid;
+}
+
+/*!  6.3.7. DatePicker */
+.flatpickr-day.inRange,.flatpickr-day.nextMonthDay.inRange,.flatpickr-day.nextMonthDay.today.inRange,.flatpickr-day.nextMonthDay:focus,.flatpickr-day.nextMonthDay:hover,.flatpickr-day.prevMonthDay.inRange,.flatpickr-day.prevMonthDay.today.inRange,.flatpickr-day.prevMonthDay:focus,.flatpickr-day.prevMonthDay:hover,.flatpickr-day.today.inRange,.flatpickr-day:focus,.flatpickr-day:hover{
+  background:var(--color-info-light);
+  border-color:var(--color-info-light);
+}
+
+.flatpickr-day.endRange.endRange:before,.flatpickr-day.endRange.startRange:before,.flatpickr-day.inRange:before,.flatpickr-day.selected.endRange:before,.flatpickr-day.selected.startRange:before,.flatpickr-day.startRange.endRange:before,.flatpickr-day.startRange.startRange:before{
+  background-color:var(--color-info-light);
+}
+
+.flatpickr-calendar{
+  border-radius:var(--border-radius-s);
+}
+
+/*!  6.4.7. Tabs */
+.osui-tabs__content-item:not(.osui-tabs--is-active){
+  display:none;
 }
 
 /*!  7.2. Colors */
@@ -1045,6 +1187,10 @@ Section Index:
   text-decoration:none;
 }
 
+.font-size-display,.heading1,.heading2,.heading3,.heading4,.heading5,.heading6,h1,h2,h3,h4,h5,h6{
+  font-weight:var(--font-bold);
+}
+
 /*!  7.9. Border Size */
 /*!  7.10. Border Radius */
 .border-radius-s{
@@ -1100,4 +1246,99 @@ Section Index:
 .shadow-xxl{
   -webkit-box-shadow:var(--shadow-xxl);
           box-shadow:var(--shadow-xxl);
+}
+
+/*!  11. Custom Patterns */
+.file-upload{
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  background:var(--color-neutral-0);
+  border:var(--border-size-s) solid var(--color-neutral-4);
+  border-radius:var(--border-radius-soft);
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  padding:var(--space-base);
+  position:relative;
+  -webkit-transition:all .18s linear;
+  transition:all .18s linear;
+}
+
+.file-upload .file-upload-delete,.file-upload .file-upload-icon{
+  color:var(--color-neutral-5);
+}
+
+.file-upload .file-upload-delete{
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  -webkit-transition:all .18s linear;
+  transition:all .18s linear;
+}
+
+.file-upload.active .file-upload-delete{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.file-upload .file-upload-message{
+  color:var(--color-primary);
+  -webkit-box-flex:1;
+  -ms-flex:1;
+  flex:1;
+  font-size:var(--font-size-base);
+  text-decoration:underline;
+  -servicestudio-z-index:2;
+}
+
+.file-upload .file-upload-widget input[type=file]{
+  cursor:pointer;
+  height:100%;
+  left:0;
+  opacity:0;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:0;
+}
+
+.file-upload.disabled{
+  background-color:var(--color-neutral-2);
+}
+
+.file-upload.disabled .file-upload-widget input[type=file]{
+  cursor:not-allowed;
+}
+
+.file-upload.disabled .file-upload-message .text-primary{
+  color:var(--color-neutral-6);
+}
+
+.file-upload-title{
+  color:var(--color-primary);
+  font-size:var(--font-size-h6);
+  font-weight:var(--font-semi-bold);
+  margin-right:var(--space-l);
+}
+
+.file-upload-description{
+  color:var(--color-neutral-7);
+  font-size:var(--font-size-xs);
+}
+
+.file-upload-center{
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+}
+
+.file-upload-content{
+  margin-left:var(--space-l);
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
 }

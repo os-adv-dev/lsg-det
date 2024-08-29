@@ -1,0 +1,12 @@
+.flatpickr-day:hover, .flatpickr-day:focus, .flatpickr-day.inRange, .flatpickr-day.today.inRange, .flatpickr-day.prevMonthDay:hover, .flatpickr-day.prevMonthDay:focus, .flatpickr-day.prevMonthDay.inRange, .flatpickr-day.prevMonthDay.today.inRange, .flatpickr-day.nextMonthDay:hover, .flatpickr-day.nextMonthDay:focus, .flatpickr-day.nextMonthDay.inRange, .flatpickr-day.nextMonthDay.today.inRange {
+  background: var(--color-info-light);
+  border-color: var(--color-info-light);
+}
+
+.flatpickr-day.selected.startRange:before, .flatpickr-day.startRange.startRange:before, .flatpickr-day.endRange.startRange:before, .flatpickr-day.selected.endRange:before, .flatpickr-day.startRange.endRange:before, .flatpickr-day.endRange.endRange:before, .flatpickr-day.inRange:before {
+  background-color: var(--color-info-light);
+}
+
+.flatpickr-calendar {
+  border-radius: var(--border-radius-s);
+}

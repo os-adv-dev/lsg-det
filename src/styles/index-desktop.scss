@@ -189,21 +189,39 @@ Section Index:
     9.5. Pull To Refresh
     9.6. Miscellaneous
 10. Service Studio Preview
+11. Custom Patterns
 */
 
 @import "00-Framework/01-foundations/font";
 /*! 0. Root - CSS Variables */
 @import "00-Framework/01-foundations/root";
 @import "01-Customer/01-foundations/root";
-
+/*! 1. Resets */
+@import "01-Customer/01-foundations/reset";
+/*!  3.1. Layout */
+@import "01-customer/03-layouts/layout";
+/*!  3.2. Header */
+@import "01-customer/03-layouts/header";
+/*!  4.1. Inputs and TextAreas */
+@import "01-customer/02-widgets/input.scss";
+/*!  4.10. Table - Bulk Actions */
+@import "01-customer/02-widgets/table";
+@import "01-customer/02-widgets/checkbox";
+/*!  6.2.5. Card */
+@import "01-Customer/04-patterns/02-content/card";
+/*!  6.2.14. Tag */
+@import "01-Customer/04-patterns/02-content/tag";
+/*!  6.3.7. DatePicker */
+@import "01-Customer/04-patterns/03-interaction/datepicker";
+/*!  6.4.7. Tabs */
+@import "01-Customer/04-patterns/04-navigation/tab";
 /*!  7.2. Colors */
 @import "00-Framework/05-useful/colors";
 /*!  7.7. Text */
 @import "00-Framework/05-useful/typography";
-
+@import "01-Customer/05-useful/text.scss";
 /*!  7.9. Border Size */
 @import "00-Framework/05-useful/border-size";
-
 /*!  7.10. Border Radius */
 @import "00-Framework/05-useful/border-radius";
 /*!  7.11. Space - Margin */
@@ -212,3 +230,5 @@ Section Index:
 @import "00-Framework/05-useful/space-padding";
 /*!  7.13. Shadow */
 @import "00-Framework/05-useful/shadow";
+/*!  11. Custom Patterns */
+@import "01-Customer/04-patterns/07-custom/file-upload";

@@ -1,0 +1,92 @@
+.layout {
+  .content-top-container.ThemeGrid_Container {
+    padding: var(--space-xl);
+  }
+
+  .content-top-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .footer.ThemeGrid_Container {
+    padding: var(--space-m) var(--space-xl);
+  }
+}
+
+.content-top-title,
+.content-top-actions {
+  margin-bottom: var(--space-none);
+}
+
+
+.content-middle.ThemeGrid_Container {
+  padding: var(--space-xl);
+  padding-bottom: calc(var(--space-xl) + var(--footer-height));
+}
+
+.content-bottom {
+  background-color: var(--color-primary);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  a,
+  a:hover {
+    color: var(--color-neutral-0);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-semi-bold);
+  }
+  
+  .btn {
+    background-color: transparent;
+    border: var(--border-size-s) solid var(--color-neutral-0);
+    color: var(--color-neutral-0);
+    &[disabled] {
+      background-color: var(--color-neutral-2);
+      border: var(--border-size-s) solid var(--color-neutral-4);
+      color: var(--color-neutral-6);
+    }
+  }
+
+  .btn-primary {
+    background-color: var(--color-neutral-0);
+    color: var(--color-primary);
+  }
+}
+
+
+
+.phone {
+  .layout {
+    .content-top-container.ThemeGrid_Container {
+      padding-left: calc(var(--os-safe-area-left) + var(--space-base));
+      padding-right:calc(var(--os-safe-area-right) + var(--space-base));
+    }
+
+    .footer.ThemeGrid_Container {
+      padding-left: calc(var(--os-safe-area-left) + var(--space-base));
+      padding-right:calc(var(--os-safe-area-right) + var(--space-base));
+    }
+  }
+
+  .content-middle.ThemeGrid_Container {
+    padding-left: calc(var(--os-safe-area-left) + var(--space-base));
+    padding-right:calc(var(--os-safe-area-right) + var(--space-base));
+  }
+}
+
+.tablet {
+  .layout {
+    .content-top-container.ThemeGrid_Container {
+      padding: var(--space-m);
+    }
+
+    .footer.ThemeGrid_Container {
+      padding: var(--space-m);
+    }
+  }
+
+  .content-middle.ThemeGrid_Container {
+    padding: var(--space-m);
+  }
+} 

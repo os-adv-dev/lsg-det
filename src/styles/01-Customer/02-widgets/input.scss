@@ -1,0 +1,10 @@
+.form-control {
+  &[data-input],
+  [data-textarea] {
+    border-radius: var(--border-radius-s);
+    
+    &:focus {
+      border: var(--border-size-m) solid var(--color-primary);
+    }
+  }
+}
