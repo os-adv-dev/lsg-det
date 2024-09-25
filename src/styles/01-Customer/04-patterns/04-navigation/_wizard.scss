@@ -1,0 +1,66 @@
+/*! Wizard */
+
+.wizard-item-icon:empty {
+	width: 24px;
+	height: 24px;
+}
+
+.wizard-wrapper-item:is(.past, .next) .wizard-item-icon:before {
+	content: "\f017";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	color: var(--color-neutral-5);
+}
+
+.wizard-wrapper-item:is(.past, .next) .wizard-item-icon {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.wizard-item-icon-wrapper:before,
+.wizard-wrapper-item.active .wizard-item-icon-wrapper:before,
+.wizard-wrapper-item.next .wizard-item-icon-wrapper:before {
+	height: 0px;
+	border: 1px dashed var(--color-neutral-5);
+	background: transparent;
+	width: calc(100% - 96px);
+	right: calc(50% + 48px);
+}
+.is-rtl .wizard-item-icon-wrapper:before,
+.is-rtl .wizard-wrapper-item.active .wizard-item-icon-wrapper:before,
+.is-rtl .wizard-wrapper-item.next .wizard-item-icon-wrapper:before {
+	left: calc(50% + 48px);
+	right: unset;
+}
+
+.wizard-wrapper-item.active .wizard-item-icon {
+	border-width: 4px;
+}
+
+.wizard-item-icon-wrapper {
+	margin: var(--space-xs) var(--space-none);
+}
+
+.wizard-wrapper-item.wizard-item-warning:is(.past, .next, .active)
+	.wizard-item-icon:before {
+	content: "\f06a";
+	color: var(--color-warning);
+	font-family: "FontAwesome";
+}
+
+.wizard-wrapper-item.wizard-item-warning:is(.past, .next, .active)
+	.wizard-item-label {
+	color: var(--color-warning);
+}
+
+.wizard-wrapper-item.wizard-item-error:is(.past, .next, .active)
+	.wizard-item-icon:before {
+	content: "\f071";
+	color: var(--color-error);
+	font-family: "FontAwesome";
+}
+
+.wizard-wrapper-item.wizard-item-error:is(.past, .next, .active)
+	.wizard-item-label {
+	color: var(--color-error);
+}

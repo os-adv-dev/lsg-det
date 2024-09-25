@@ -204,8 +204,12 @@ Section Index:
 @import "01-customer/03-layouts/header";
 /*!  4.1. Inputs and TextAreas */
 @import "01-customer/02-widgets/input.scss";
+/*!  4.5. Buttons */
+@import "01-Customer/02-widgets/button";
 /*!  4.10. Table - Bulk Actions */
 @import "01-customer/02-widgets/table";
+/*!  4.15. Popup */
+@import "01-Customer/02-widgets/popup";
 @import "01-customer/02-widgets/checkbox";
 /*!  6.2.5. Card */
 @import "01-Customer/04-patterns/02-content/card";
@@ -213,8 +217,13 @@ Section Index:
 @import "01-Customer/04-patterns/02-content/tag";
 /*!  6.3.7. DatePicker */
 @import "01-Customer/04-patterns/03-interaction/datepicker";
+/*! 6.3.17. Sidebar */
+@import "01-Customer/04-patterns/03-interaction/sidebar";
 /*!  6.4.7. Tabs */
 @import "01-Customer/04-patterns/04-navigation/tab";
+/*!  6.4.9. Wizard */
+@import "01-Customer/04-patterns/04-navigation/wizard";
+
 /*!  7.2. Colors */
 @import "00-Framework/05-useful/colors";
 /*!  7.7. Text */
@@ -231,4 +240,7 @@ Section Index:
 /*!  7.13. Shadow */
 @import "00-Framework/05-useful/shadow";
 /*!  11. Custom Patterns */
+/*! File Upload */
 @import "01-Customer/04-patterns/07-custom/file-upload";
+/* Custom Section Accordion Item */
+@import "01-Customer/04-patterns/07-custom/custom-section-accordion-item";

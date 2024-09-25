@@ -1,0 +1,8 @@
+.is-rtl .osui-sidebar--is-right {
+	left: 0;
+	right: unset;
+	transform: translateX(-102%);
+}
+.is-rtl .active-screen .osui-sidebar--is-open {
+	transform: none;
+}

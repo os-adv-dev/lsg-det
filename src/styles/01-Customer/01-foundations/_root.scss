@@ -1,3 +1,17 @@
 :root {
-  --font-semi-bold: 500;
+	--font-semi-bold: 500;
+	--color-background-body: var(--color-neutral-0);
+	--sub-header-size: 56px;
+	--layout-progress-bar-size: 8px;
+
+	--full-header-height: calc(
+		var(--sub-header-size) + var(--header-size) +
+			var(--layout-progress-bar-size)
+	);
+}
+
+body {
+	--main-content-height: calc(
+		100vh - var(--full-header-height) - var(--footer-height)
+	);
 }
